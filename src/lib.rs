@@ -2,6 +2,7 @@
 //! [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/JorgeRicoVivas/simple_detailed_error/rust.yml)](https://github.com/JorgeRicoVivas/simple_detailed_error/actions)
 //! [![docs.rs](https://img.shields.io/docs.rs/simple_detailed_error)](https://docs.rs/simple_detailed_error/latest/simple_detailed_error/)
 //! [![GitHub License](https://img.shields.io/github/license/JorgeRicoVivas/simple_detailed_error)](https://github.com/JorgeRicoVivas/simple_detailed_error?tab=CC0-1.0-1-ov-file)
+//! ![](https://img.shields.io/badge/This%20docs%20version-1.0.0-blue)
 //!
 //! This crate allows to easily associate Local/Session storage data through the [StorageData]
 //! struct and to retrieve and set the value without requiring to manually interacting with the Web

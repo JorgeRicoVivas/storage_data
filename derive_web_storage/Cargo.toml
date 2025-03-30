@@ -1,7 +1,14 @@
 [package]
 name = "derive_web_storage"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2021"
+authors = ["Jorge Rico Vivas <jorgericoinformatic@gmail.com>"]
+description = "Easily associate Storage values to variables and manage them without manually using the Web Storage API"
+repository = "https://github.com/JorgeRicoVivas/storage_data"
+keywords = ["Storage", "WebStorage", "LocalStorage", "SessionStorage"]
+categories = ["no-std", "wasm", "data-structures", "web-programming"]
+license-file = "LICENSE.txt"
+readme = "README.md"
 
 [lib]
 proc-macro = true
