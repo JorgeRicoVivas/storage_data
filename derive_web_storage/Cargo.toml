@@ -14,7 +14,7 @@ readme = "README.md"
 proc-macro = true
 
 [features]
-default = []
+default = ["default_storage_local"]
 
 default_storage_local = []
 default_storage_session = []
