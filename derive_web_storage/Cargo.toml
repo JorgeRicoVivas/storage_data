@@ -1,0 +1,21 @@
+[package]
+name = "derive_web_storage"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+proc-macro = true
+
+[features]
+default = []
+
+default_storage_local = []
+default_storage_session = []
+
+[dependencies]
+convert_case = "0.7.1"
+proc-macro2 = { version = "1.0.93", features = [] }
+proc-macro-error = "1.0.4"
+quote = { version = "1.0.38", features = [] }
+syn = { version = "2.0.98", features = ["full"] }
+

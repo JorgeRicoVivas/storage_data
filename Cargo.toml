@@ -1,0 +1,46 @@
+[package]
+name = "storage_data"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["default_storage_local", "default_serde_json", "derive"]
+
+std = ["once_cell/std"]
+
+default_storage_local = ["derive_web_storage/default_storage_local"]
+default_storage_session = ["derive_web_storage/default_storage_session"]
+
+derive = ["dep:derive_web_storage"]
+
+default_serde_json = ["use_serde_json"]
+use_serde_json = ["dep:serde_json"]
+
+default_serde_bincode = ["use_serde_bincode"]
+use_serde_bincode = ["dep:bincode", "dep:base64"]
+
+default_serde_yaml = ["use_serde_yaml"]
+use_serde_yaml = ["dep:serde_yaml"]
+
+default_serde_ron = ["use_serde_ron"]
+use_serde_ron = ["dep:ron"]
+
+default_serde_cbor = ["use_serde_cbor"]
+use_serde_cbor = ["dep:ciborium", "dep:base64"]
+
+
+[dependencies]
+wasm-bindgen = { version = "0.2.100", default-features = false, features = [] }
+web-sys = { version = "0.3.77", default-features = false, features = ["Window", "Storage"] }
+serde = { version = "1.0.219", default-features = false, features = [] }
+once_cell = { version = "1.21.3", default-features = false, features = ["critical-section"] }
+
+derive_web_storage = { path = "derive_web_storage", optional = true }
+
+serde_json = { version = "1.0.138", optional = true, default-features = false, features = ["alloc"] }
+bincode = { version = "1.3.3", optional = true, default-features = false, features = [] }
+serde_yaml = { version = "0.9.34", optional = true, default-features = false, features = [] }
+ron = { version = "0.8.1", optional = true, default-features = false, features = [] }
+ciborium = { version = "0.2.2", optional = true, default-features = false, features = [] }
+
+base64 = { version = "0.22.1", optional = true }
